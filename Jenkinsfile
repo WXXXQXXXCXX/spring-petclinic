@@ -6,8 +6,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh './mvnw package' 
             }
+        }
+        stage('Run') {
+            sh 'java -jar target/*.jar'
         }
     }
 }
