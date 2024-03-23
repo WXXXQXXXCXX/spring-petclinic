@@ -10,7 +10,9 @@ pipeline {
             }
         }
         stage('Run') {
-            sh 'java -jar target/*.jar'
+            steps{
+                sh 'java -jar target/*.jar'
+            }
         }
     }
 }
