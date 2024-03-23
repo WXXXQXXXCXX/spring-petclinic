@@ -9,10 +9,5 @@ pipeline {
                 sh './mvnw package' 
             }
         }
-        stage('Run') {
-            steps{
-                sh 'nohup java -jar target/*.jar &'
-            }
-        }
     }
 }
